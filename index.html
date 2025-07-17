@@ -80,26 +80,26 @@
             <ul>
                 <li>
                     <h1>القطاعات</h1>
-                    <a href="cutting.html">
-                        <img src="assets/assets/imgs/قطاعة بيضه احسن.jpg" alt="القطاعات"/>
+                    <a href="cutting.html" >
+                        <img src="assets/assets/imgs/قطاعات.jpg  " alt="القطاعات"/>
                     </a>
                 </li>
                 <li>
-                    <h1>ايد الهون</h1>
-                    <a href="">
-                        <img src="assets/assets/imgs/ايد الهون 2.jpg" alt="ايد الهون"/>
+                    <h1 >ايد الهون</h1>
+                    <a href="" >
+                        <img src="assets/assets/imgs/ايد الهون 23.jpg" alt="ايد الهون "/>
                     </a>
                 </li>
                 <li>
-                    <h1>طبق التسليه</h1>
-                    <a href="">
-                        <img src="assets/assets/imgs/طبق التسليه .jpg" alt="طبق التسليه"/>
+                    <h1>طبق التسليه </h1>
+                    <a href="" >
+                        <img src="assets/assets/imgs/طبق التسلية.jpg" alt="تطبيق جوال"/>
                     </a>
                 </li>
                 <li>
-                    <h1>الصنيه</h1>
-                    <a href="">
-                        <img src="assets/assets/imgs/الصنيه.jpg" alt="الصنيه"/>
+                    <h1>الصنيه </h1>
+                    <a href="" >
+                        <img src="assets/assets/imgs/الصنيه.jpg" alt="تطبيق جوال"/>
                     </a>
                 </li>
             </ul>
@@ -120,7 +120,7 @@
         <div class="contact">
             <div class="emailAndPhone">
                 <img src="assets/assets/svg/phone.svg" alt="أيقونة الهاتف"/>
-                <a href="tel:+01113636924"><h3>01113636924+</h3></a>
+                <a href="tel:01113636924"><h3>01113636924</h3></a>
             </div>
         </div>   
         <!-- روابط التواصل الاجتماعي -->
@@ -128,8 +128,8 @@
            <a href="https://www.instagram.com/mahmoub_farg/?__pwa=1" target="_blank">
               <img src="assets/assets/svg/instagram.svg" alt="instagram"/>
            </a>
-           <a href="+201113636924" target="_blank">
-              <img src="assets/assets/svg/whatsapp-logo-variant-svgrepo-com.svg" alt="whatssapp"/>
+           <a href="https://wa.me/201113636924" target="_blank">
+              <img src="assets/assets/svg/whatsapp-logo-variant-svgrepo-com.svg" alt="whatsapp"/>
            </a>
            <a href="https://www.facebook.com/mahmoudshakoo.shakoo" target ="_blank">
               <img src="assets/assets/svg/فيسبوك.svg" alt="facebook"/>
@@ -199,16 +199,22 @@
             // تغيير العناوين
             document.querySelectorAll('.aboutName').forEach(e => e.textContent = translations[lang].aboutMe);
             document.querySelectorAll('.aboutTitle').forEach(e => e.textContent = translations[lang].aboutTitle);
-            document.querySelector('.companyInfo h2').textContent = translations[lang].companyTitle;
-            document.querySelector('.companyInfo p').innerHTML = translations[lang].companyText;
+            const companyTitle = document.querySelector('.companyInfo h2');
+            if(companyTitle) companyTitle.textContent = translations[lang].companyTitle;
+            const companyText = document.querySelector('.companyInfo p');
+            if(companyText) companyText.innerHTML = translations[lang].companyText;
             // تغيير روابط القائمة
             const navLinks = document.querySelectorAll('.navigation ul li a');
-            navLinks[0].textContent = translations[lang].nav[0];
-            navLinks[1].textContent = translations[lang].nav[1];
-            navLinks[2].textContent = translations[lang].nav[2];
+            if(navLinks.length >= 3) {
+                navLinks[0].textContent = translations[lang].nav[0];
+                navLinks[1].textContent = translations[lang].nav[1];
+                navLinks[2].textContent = translations[lang].nav[2];
+            }
             // تغيير عناوين التواصل
-            document.querySelector('.contactTitle .aboutName').textContent = translations[lang].contactTitle;
-            document.querySelector('.contactTitle .aboutTitle').textContent = translations[lang].contactInfo;
+            const contactName = document.querySelector('.contactTitle .aboutName');
+            if(contactName) contactName.textContent = translations[lang].contactTitle;
+            const contactInfo = document.querySelector('.contactTitle .aboutTitle');
+            if(contactInfo) contactInfo.textContent = translations[lang].contactInfo;
         };
 
         // عند الضغط على زر الإضاءة (الوضع الليلي/الفاتح)
