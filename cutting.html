@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .video-frame {
+            width: 98vw;
+            height: 85vh;
+            max-width: 1600px;
+            max-height: 900px;
+            margin: 40px auto;
+            border: 4px solid #FFD700;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #222;
+            position: relative;
+        }
+        .video-frame video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            background: #000;
+        }
+        .mute-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.6);
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .mute-btn svg {
+            width: 28px;
+            height: 28px;
+            fill: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-frame">
+        <button class="mute-btn" id="muteBtn" title="كتم/تشغيل الصوت">
+            <!-- أيقونة الصوت الافتراضية (غير مكتوم) -->
+            <svg id="icon-unmuted" viewBox="0 0 24 24"><path d="M3 10v4h4l5 5V5l-5 5H3zm13.5 2c0-1.77-1.02-3.29-2.5-4.03v8.06c1.48-.74 2.5-2.26 2.5-4.03zm2.5 0c0 3.04-1.64 5.64-4.5 6.32v2.02c4.01-.91 7-4.49 7-8.34s-2.99-7.43-7-8.34v2.02c2.86.68 4.5 3.28 4.5 6.32z"/></svg>
+            <!-- أيقونة مكتوم (مخفية افتراضياً) -->
+            <svg id="icon-muted" viewBox="0 0 24 24" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.06c1.48-.74 2.5-2.26 2.5-4.03zm2.5 0c0 3.04-1.64 5.64-4.5 6.32v2.02c4.01-.91 7-4.49 7-8.34s-2.99-7.43-7-8.34v2.02c2.86.68 4.5 3.28 4.5 6.32zM3.27 2L2 3.27l5 5V19h6v-4.73l5.73 5.73 1.27-1.27L3.27 2z"/></svg>
+        </button>
+        <video id="mainVideo" src="assets/assets/vidoe/all.mp4" autoplay controls muted></video>
+    </div>
+    <script>
+        const video = document.getElementById('mainVideo');
+        const muteBtn = document.getElementById('muteBtn');
+        const iconMuted = document.getElementById('icon-muted');
+        const iconUnmuted = document.getElementById('icon-unmuted');
+
+        // اجعل الفيديو غير مكتوم عند البداية
+        video.muted = false;
+
+        muteBtn.onclick = function() {
+            video.muted = !video.muted;
+            if(video.muted) {
+                iconMuted.style.display = '';
+                iconUnmuted.style.display = 'none';
+            } else {
+                iconMuted.style.display = 'none';
+                iconUnmuted.style.display = '';
+            }
+        };
+    </script>
+</body>
+</html>

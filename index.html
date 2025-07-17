@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ربط ملف التنسيقات الخارجي -->
+    <link rel="stylesheet" href="styles.css">
+    <title>El Mahmoud</title>
+</head>
+<body>
+    <!-- =========================
+         رأس الصفحة (Header)
+         يحتوي على: الشعار، زر تغيير اللغة، زر تغيير الإضاءة، قائمة التنقل
+    ========================== -->
+    <header>
+        <!-- شعار الموقع -->
+        <img src="assets/assets/svg/diamond-lodo.svg" alt="شعار الموقع" width="50" >
+        <!-- زر تغيير اللغة (عربي/إنجليزي) -->
+        <button id="langSwitch" style="margin-right: 8px;">English</button>
+        <!-- زر تغيير الإضاءة (فاتح/غامق) -->
+        <button id="themeSwitch" style="margin-right: 8px;">🌙</button>
+        <!-- قائمة التنقل الرئيسية -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="#aboutMe">عنّي</a></li>
+                <li><a href="#MyWorks">المنتجات</a></li>
+                <li><a href="#ContactMe">تواصل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- خط فاصل بين الرأس وباقي الصفحة -->
+    <hr />
+
+    <!-- =========================
+         قسم عنّي (About Me)
+         صورة شخصية + عنوان + فقرة تعريفية
+    ========================== -->
+    <section class="aboutMe" id="aboutMe">
+        <img 
+            src="assets/assets/svg/AboutMe.svg" 
+            alt="صورة عنّي"
+            class="aboutMeimg"
+        />
+        <div class="textContainer">
+            <div class="textTitle">
+                <h1 class="aboutName">عنّي</h1>
+                <img src="assets/assets/svg/lightbulb.svg" alt="مصباح" class="light"/> 
+            </div>
+            <p class="aboutMePar">
+                <hr />
+            </p>
+            <!-- قسم معلومات الشركة -->
+            <div class="companyInfo" dir="rtl">
+                <h2>عن شركة El Mahmoud للبلاستيك</h2>
+                <p>
+                    شركة <strong>El Mahmoud</strong> للبلاستيك هي إحدى الشركات الرائدة في مجال تصنيع المنتجات البلاستيكية عالية الجودة في مصر. نتميز بخبرة طويلة في إنتاج وتوريد جميع أنواع البلاستيك المستخدم في الصناعات المختلفة، مع الالتزام بأعلى معايير الجودة والابتكار. 
+                    <br>
+                    تهدف الشركة إلى تلبية احتياجات السوق المحلي والدولي من خلال تقديم منتجات متطورة تلبي متطلبات العملاء وتواكب أحدث التقنيات في مجال صناعة البلاستيك. 
+                    <br>
+                    فريقنا يضم نخبة من المهندسين والفنيين ذوي الكفاءة العالية، ونعتمد على أحدث خطوط الإنتاج لضمان تقديم منتجات متينة وآمنة وصديقة للبيئة.
+                    <br>
+                    نسعى دائماً لبناء علاقات طويلة الأمد مع عملائنا من خلال الثقة والجودة والالتزام بالمواعيد.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <hr />
+
+    <!-- =========================
+         قسم الأعمال (المنتجات/المشاريع)
+    ========================== -->
+    <section class="Works" id="MyWorks">
+        <div class="WorksContainer">
+            <div class="Projects">
+                <h1 class="aboutName">أحدث أعمالي</h1>
+                <h1 class="aboutTitle">المشاريع</h1>
+            </div>
+            <ul>
+                <li>
+                    <h1>القطاعات</h1>
+                    <a href="cutting.html" >
+                        <img src="assets/assets/imgs/قطاعة بيضه احسن.jpg" alt="القطاعات"/>
+                    </a>
+                </li>
+                <li>
+                    <h1 >ايد الهون</h1>
+                    <a href=" >
+                        <img src="assets/assets/imgs/ايد الهون 2.jpg" alt="ايد الهون "/>
+                    </a>
+                </li>
+                <li>
+                    <h1>طبق التسليه </h1>
+                    <a href="" >
+                        <img src="assets/assets/imgs/طبق التسليه .jpg" alt="تطبيق جوال"/>
+                    </a>
+                </li>
+                <li>
+                    <h1>الصنيه </h1>
+                    <a href="" >
+                        <img src="assets/assets/imgs/الصنيه.jpg" alt="تطبيق جوال"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <hr />
+
+    <!-- =========================
+         قسم التواصل (Contact)
+         معلومات التواصل وروابط السوشيال ميديا
+    ========================== -->
+    <section class="contactContainer" id="ContactMe">
+        <div class="contactTitle">
+            <h1 class="aboutName">تواصل معي</h1>
+            <h1 class="aboutTitle">معلومات التواصل</h1>
+        </div>
+        <div class="contact">
+            <div class="emailAndPhone">
+                <img src="assets/assets/svg/phone.svg" alt="أيقونة الهاتف"/>
+                <a href="tel:+01113636924"><h3>01113636924+</h3></a>
+            </div>
+        </div>   
+        <!-- روابط التواصل الاجتماعي -->
+        <div class="social-media">
+           <a href="https://www.instagram.com/mahmoub_farg/?__pwa=1" target="_blank">
+              <img src="assets/assets/svg/instagram.svg" alt="instagram"/>
+           </a>
+           <a href="+201113636924" target="_blank">
+              <img src="assets/assets/svg/whatsapp-logo-variant-svgrepo-com.svg" alt="whatssapp"/>
+           </a>
+           <a href="https://www.facebook.com/mahmoudshakoo.shakoo" target ="_blank">
+              <img src="assets/assets/svg/فيسبوك.svg" alt="facebook"/>
+           </a>
+        </div>
+    </section>
+
+    <hr />
+
+    <!-- =========================
+         تذييل الصفحة (Footer)
+    ========================== -->
+    <footer>
+        <p>
+            &copy; 2025 عبدالرحمن. جميع الحقوق محفوظة.
+        </p>
+    </footer>
+
+    <!-- =========================
+         أكواد جافاسكريبت (الأسفل)
+         1- تبديل اللغة
+         2- تبديل الوضع الليلي/الفاتح
+    ========================== -->
+    <script>
+        // زر تغيير اللغة
+        const langSwitch = document.getElementById('langSwitch');
+        // زر تغيير الإضاءة
+        const themeSwitch = document.getElementById('themeSwitch');
+        let isArabic = true;
+        let isDark = false;
+
+        // جميع النصوص باللغتين
+        const translations = {
+          ar: {
+            aboutMe: "عنّي",
+            aboutTitle: "عنّي",
+            companyTitle: "عن شركة El Mahmoud للبلاستيك",
+            companyText: `شركة <strong>El Mahmoud</strong> للبلاستيك هي إحدى الشركات الرائدة في مجال تصنيع المنتجات البلاستيكية عالية الجودة في مصر. نتميز بخبرة طويلة في إنتاج وتوريد جميع أنواع البلاستيك المستخدم في الصناعات المختلفة، مع الالتزام بأعلى معايير الجودة والابتكار.<br>
+            تهدف الشركة إلى تلبية احتياجات السوق المحلي والدولي من خلال تقديم منتجات متطورة تلبي متطلبات العملاء وتواكب أحدث التقنيات في مجال صناعة البلاستيك.<br>
+            فريقنا يضم نخبة من المهندسين والفنيين ذوي الكفاءة العالية، ونعتمد على أحدث خطوط الإنتاج لضمان تقديم منتجات متينة وآمنة وصديقة للبيئة.<br>
+            نسعى دائماً لبناء علاقات طويلة الأمد مع عملائنا من خلال الثقة والجودة والالتزام بالمواعيد.`,
+            nav: ["عنّي", "المنتجات", "تواصل"],
+            contactTitle: "تواصل معي",
+            contactInfo: "معلومات التواصل"
+          },
+          en: {
+            aboutMe: "About Me",
+            aboutTitle: "About",
+            companyTitle: "About El Mahmoud Plastic Company",
+            companyText: `<strong>El Mahmoud</strong> Plastic Company is one of the leading companies in the field of high-quality plastic products manufacturing in Egypt. We have extensive experience in producing and supplying all types of plastics used in various industries, adhering to the highest standards of quality and innovation.<br>
+            The company aims to meet the needs of the local and international market by providing advanced products that meet customer requirements and keep pace with the latest technologies in the plastic industry.<br>
+            Our team includes a group of highly qualified engineers and technicians, and we rely on the latest production lines to ensure durable, safe, and environmentally friendly products.<br>
+            We always strive to build long-term relationships with our customers through trust, quality, and commitment to deadlines.`,
+            nav: ["About", "Products", "Contact"],
+            contactTitle: "Contact Me",
+            contactInfo: "Contact Information"
+          }
+        };
+
+        // عند الضغط على زر اللغة
+        langSwitch.onclick = function() {
+            isArabic = !isArabic;
+            const lang = isArabic ? "ar" : "en";
+            document.documentElement.lang = lang;
+            document.body.dir = isArabic ? "rtl" : "ltr";
+            langSwitch.textContent = isArabic ? "English" : "عربي";
+            // تغيير العناوين
+            document.querySelectorAll('.aboutName').forEach(e => e.textContent = translations[lang].aboutMe);
+            document.querySelectorAll('.aboutTitle').forEach(e => e.textContent = translations[lang].aboutTitle);
+            document.querySelector('.companyInfo h2').textContent = translations[lang].companyTitle;
+            document.querySelector('.companyInfo p').innerHTML = translations[lang].companyText;
+            // تغيير روابط القائمة
+            const navLinks = document.querySelectorAll('.navigation ul li a');
+            navLinks[0].textContent = translations[lang].nav[0];
+            navLinks[1].textContent = translations[lang].nav[1];
+            navLinks[2].textContent = translations[lang].nav[2];
+            // تغيير عناوين التواصل
+            document.querySelector('.contactTitle .aboutName').textContent = translations[lang].contactTitle;
+            document.querySelector('.contactTitle .aboutTitle').textContent = translations[lang].contactInfo;
+        };
+
+        // عند الضغط على زر الإضاءة (الوضع الليلي/الفاتح)
+        themeSwitch.onclick = function() {
+            isDark = !isDark;
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                themeSwitch.textContent = "☀️";
+            } else {
+                document.body.classList.remove('dark-mode');
+                themeSwitch.textContent = "🌙";
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<!-- filepath: assets/assets/svg/facebook.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <rect width="48" height="48" rx="10" fill="#1877F3"/>
+  <path d="M33 24.001h-5v14h-6v-14h-3v-5h3v-3.2C22 13.119 23.119 12 25.2 12H33v5h-4.2c-.442 0-.8.358-.8.8v2.2h5l-1 5z" fill="#fff"/>
+</svg>
